@@ -1,0 +1,33 @@
+void main() {
+
+}
+ class Merges {
+  List<int> listOne;
+  List<int> listTwo;
+
+  Merges(this.listOne, this.listTwo);
+  factory Merges.My (List<int> listOne, List<int> listTwo) {
+    if(listOne.sort((a,b)=>a.compareTo(b))=!listOne || listTwo.sort((a,b)=>a.compareTo(b))=!listTwo )
+      {throw Exception("Listlar sortlanmagan");}
+    return Merges(listOne, listTwo);
+  }
+  List<int> mergeTwoSortedList (listOne, listTwo) {return [...listOne, ...listTwo].sort((a,b)=>a.compareTo(b));};
+
+  @override
+  String toString() {
+    return 'Merges{listOne: $listOne, listTwo: $listTwo}';
+  }
+
+  @override
+  dynamic noSuchMethod(Invocation invocation) {
+    listOne is List<int>;
+    listTwo is List<int>
+  }
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+          other is Merges && runtimeType == other.runtimeType &&
+              listOne == other.listOne && listTwo == other.listTwo;
+
+ }

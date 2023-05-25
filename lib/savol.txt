@@ -1,0 +1,21 @@
+Bir turdan bohsqa tur sifatida foydalanish Type casting deyiladi.
+Type cating as kalit so'zidan foydalainib ishlatiladi.
+Bola classni ota klass sifatida foydalainish Up-casting deyiladi. bu to'g'ri.
+CChunki bola class ota classning barcha methodlarini meros qilib olgan.
+class Paretns {
+}
+class Child extends Parents{
+}
+Child child=Child();
+Parents child1=child as Parents; // bu no'g'ri
+
+Parents parents=Parents();
+Child parents1=parents as Child;
+
+Ota klassni bola class sifatida foydalainish Down-casting deyiladi. Bu noto'g'ri.
+Chunki bola class kengaygan bo'lishi mumkin.
+
+Typecastingda Doublni int sifatida foydalainish xavfli ya,ni noto'g'ri.
+
+Lekin int turidan  Double sifatida foydalainish mumkin.
+
